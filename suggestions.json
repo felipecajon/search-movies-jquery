@@ -1,0 +1,29 @@
+{
+    "suggestions": [
+        {
+            "id": "tt0077869",
+            "name": "The Lord of the Rings",
+            "poster": "https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt0096895",
+            "name": "Batman",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
+        },
+        {
+            "id": "tt0076759",
+            "name": "Star Wars: Episode IV - A New Hope",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+        },
+        {
+            "id": "tt0190374",
+            "name": "Dungeons & Dragons",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMDc3OTQyOV5BMl5BanBnXkFtZTYwMzk5OTc3._V1_SX300.jpg"
+        },
+        {
+            "id": "tt3717490",
+            "name": "Power Rangers",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMTU1MTkxNzc5NF5BMl5BanBnXkFtZTgwOTM2Mzk3MTI@._V1_SX300.jpg"
+        }
+    ]
+}

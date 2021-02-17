@@ -1,0 +1,39 @@
+each(range(@initCounter, @endCounter), {
+    @counterValue: (@value * @multiple-base);
+
+    .p-@{counterValue} {
+        padding: ~"@{counterValue}px";
+    }
+});
+
+each(range(@initCounter, @endCounter), {
+    @counterValue: (@value * @multiple-base);
+
+    .p-t-@{counterValue} {
+        padding-top: ~"@{counterValue}px";
+    }
+});
+
+each(range(@initCounter, @endCounter), {
+    @counterValue: (@value * @multiple-base);
+
+    .p-r-@{counterValue} {
+        padding-right: ~"@{counterValue}px";
+    }
+});
+
+each(range(@initCounter, @endCounter), {
+    @counterValue: (@value * @multiple-base);
+
+    .p-b-@{counterValue} {
+        padding-bottom: ~"@{counterValue}px";
+    }
+});
+
+each(range(@initCounter, @endCounter), {
+    @counterValue: (@value * @multiple-base);
+
+    .p-l-@{counterValue} {
+        padding-left: ~"@{counterValue}px";
+    }
+});

@@ -1,0 +1,139 @@
+.loader-local {
+  position: relative;
+
+  .loader-local-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255, 0.7);
+
+    z-index: 1000;
+  }
+}
+
+.container-loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(255,255,255, 0.7);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.lds-ellipsis-text {
+  width: 100%;
+  text-align: center;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(red(@brand-primary),green(@brand-primary),blue(@brand-primary), 1);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+// ** Loader 2
+
+.loader-bar {
+  border: 1px solid #ccc;
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  //background-image: repeating-linear-gradient( -45deg, red, red 11px, #fff 10px, #fff 20px);
+  background-image: repeating-linear-gradient(-45deg, #ccc, #ccc 0px, #fff 1px, #fff 10px);
+  animation: move .5s linear infinite;
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 28px 0;
+    }
+  }
+
+  .bar {
+    width: 0;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(red(@brand-primary),green(@brand-primary),blue(@brand-primary), 1);
+    background-size: 28px 28px;
+    transition: all 0.2s ease-in-out;
+  }
+}
+

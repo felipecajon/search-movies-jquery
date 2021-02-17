@@ -1,0 +1,44 @@
+@heightFooter: 80px;
+@heightHeader: 70px;
+
+body {
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: @heightFooter;
+
+	.scrollbar(@brand-primary, 12px);
+}
+
+.list-type {
+	&-01 {
+		li {
+			background: @color-01;
+			padding: 12px;
+
+			&.active,
+			&:hover {
+				background: @brand-primary;
+
+				a {
+					color: @color-01;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: @heightFooter;
+	background: darken(@brand-primary, 10%);
+}
+
+.column-side-bar,
+.column-main-content {
+	min-height: calc(100vh - @heightFooter - @heightHeader);
+}

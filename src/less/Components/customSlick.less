@@ -1,0 +1,57 @@
+@color-arrow: @brand-primary;
+@color-bg-arrow: #ffffff;
+
+.slick-initialized {
+	.slick-slide {
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+
+		&.left,
+		&.right {
+			transform: rotate(0deg);
+			transform: translate(0, -50%);
+			transition: all ease-in-out .1s;
+			padding: 20px 10px;
+
+			z-index: 1;
+			top: 50%;
+
+			cursor: pointer;
+
+			color: @color-arrow;
+			background-color: @color-bg-arrow;
+
+			&:hover {
+				color: @color-bg-arrow;
+				background-color: @color-arrow;
+			}
+		}
+		
+		&.left {
+			left: 0;
+
+			-webkit-border-top-right-radius: 50px;
+			-webkit-border-bottom-right-radius: 50px;
+			-moz-border-radius-topright: 50px;
+			-moz-border-radius-bottomright: 50px;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+
+		&.right {
+			right: 0;
+
+			-webkit-border-top-left-radius: 50px;
+			-webkit-border-bottom-left-radius: 50px;
+			-moz-border-radius-topleft: 50px;
+			-moz-border-radius-bottomleft: 50px;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+	}
+}

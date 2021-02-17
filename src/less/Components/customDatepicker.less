@@ -1,0 +1,75 @@
+@datpicker-title-text: #ffffff;
+@datpicker-common-text: #333333;
+@datpicker-bg: @brand-primary;
+
+.ui-state-default, 
+.ui-widget-content 
+.ui-state-default, 
+.ui-widget-header 
+.ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+	color: @datpicker-common-text;
+}
+
+.ui-widget.ui-widget-content {
+	margin-top: -12px;
+}
+
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span {
+	text-indent: unset;
+	margin: 0;
+	transform: translate(-50%, -50%);
+	line-height: 100% !important;
+	display: flex !important;
+	justify-content: center;
+	top: 50% !important;
+
+	&.ui-icon-circle-triangle-w {
+		.glyphicon();
+		.glyphicon-chevron-left();
+
+		// .icon-arrow-left();
+	}
+
+	&.ui-icon-circle-triangle-e {
+		.glyphicon();
+		.glyphicon-chevron-right();
+
+		// .icon-arrow-right();
+	}
+}
+
+.ui-widget-header {
+	color: @datpicker-title-text;
+
+	a {
+		color: @datpicker-title-text;
+	}
+}
+
+.ui-widget-header {
+	background: @brand-primary;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+	background: @datpicker-title-text;
+	border-color: @brand-primary;
+	color: @datpicker-common-text;
+}
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+	background: @brand-primary;
+	border-color: @brand-primary;
+	color: @datpicker-title-text;
+}
+
