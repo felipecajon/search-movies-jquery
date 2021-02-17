@@ -119,36 +119,36 @@ const pagehome = new class PageHome {
 
     createTemplateMovieDetails (data) {
         return `
-            <div class="m-t-40">
+            <div class="m-t-28">
                 <div class="row">
-                    <div class="col-md-9">
-                        <p class="font-03 fs-06">
+                    <div class="col-md-9 m-t-12">
+                        <h3 class="font-03 fs-06">
                             ${data.Title}
-                        </p>
-                        <p>
+                        </h3>
+                        <p class="m-t-8">
                             ${data.Plot}
                         </p>
                         <div class="m-t-20">
                             <p class="m-t-4" >
-                                <span class="font-02">
+                                <span class="fw-bold">
                                     Diretor:
                                 </span>
                                 ${data.Director}
                             </p>
                             <p class="m-t-4" >
-                                <span class="font-02">
+                                <span class="fw-bold">
                                     Ator:
                                 </span>
                                 ${data.Actors}
                             </p>
                             <p class="m-t-4" >
-                                <span class="font-02">
+                                <span class="fw-bold">
                                     Ano:
                                 </span>
                                 ${data.Year}
                             </p>
                             <p class="m-t-4" >
-                                <span class="font-02">
+                                <span class="fw-bold">
                                     Genero:
                                 </span>
                                 ${data.Genre}
@@ -159,8 +159,9 @@ const pagehome = new class PageHome {
                             </button>
                         </div>
                     </div>
-                    <div class="t-a-c col-md-3">
-                        <img src="${data.Poster}" alt="${data.Title}" title="${data.Title}">
+
+                    <div class="col-md-3 m-t-12">
+                        <img src="${data.Poster}" alt="${data.Title}" title="${data.Title}" class="w-100">
                     </div>
                 </div>
             </div>
