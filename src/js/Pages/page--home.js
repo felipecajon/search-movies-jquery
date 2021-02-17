@@ -23,7 +23,7 @@ const pagehome = new class PageHome {
             return false;
         }
 
-        const url = `http://www.omdbapi.com`;
+        const url = `https://www.omdbapi.com`;
         // const url = `http://localhost:3000/mockResponse.json`;
         let params = {
             apikey: '7809a72a',
@@ -46,12 +46,12 @@ const pagehome = new class PageHome {
             })
             .done(function(data) {
                 const $movieContent = $('.js-content-movie');
+                $movieContent.removeClass('hidden');
 
-                if (data) {
-                    $movieContent.removeClass('hidden');
-                    $movieContent.html( pagehome.createTemplateMovieDetails(data) );
+                if (data && data.Response == 'False') {
+                    $movieContent.html( pagehome.createTemplateNoMovie() );
                 } else {
-                    $movieContent.addClass('hidden');
+                    $movieContent.html( pagehome.createTemplateMovieDetails(data) );
                 }
             })
             .fail(function() {
@@ -99,6 +99,21 @@ const pagehome = new class PageHome {
             <div class="js-slick-suggestion js-slick-default m-t-40 m-b-40">
                 ${sliders}
             </div>
+        `;
+    }
+
+    createTemplateNoMovie () {
+        return `
+            <div data-testid="no-movie" class="t-a-c">
+                <h2 class="m-t-20">
+                    Ops! este filme a gente ainda não viu...
+                </h2>
+                <p class="m-t-12">
+                    tente outro, por favor...
+                    <span class="font-02 fs-06"> ='(</span>
+                </p>
+            </div>
+
         `;
     }
 
